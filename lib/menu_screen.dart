@@ -3,7 +3,7 @@ import 'zoom_scaffold.dart';
 import 'circular_image.dart';
 
 final String imageUrl =
-    "https://celebritypets.net/wp-content/uploads/2016/12/Adriana-Lima.jpg";
+    "https://avatars1.githubusercontent.com/u/30185369?s=460&v=4";
 
 var divwidth = 0.0;
 var divheight = 0.0;

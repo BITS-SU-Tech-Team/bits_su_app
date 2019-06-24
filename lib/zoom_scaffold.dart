@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'menu_screen.dart';
 import 'myapp_bar_dscreen.dart';
+import 'myapp_bar.dart';
+import 'myapp_bar_dscreen.dart';
 
 class ZoomScaffold extends StatefulWidget {
   final Widget menuScreen;
@@ -38,6 +40,10 @@ class _ZoomScaffoldState extends State<ZoomScaffold>
     super.dispose();
   }
 
+  MenuController retMenuControl() {
+    return menuController;
+  }
+
   createContentDisplay() {
     var divheight = MediaQuery.of(context).size.height;
     var divwidth = MediaQuery.of(context).size.width;
@@ -46,14 +52,23 @@ class _ZoomScaffoldState extends State<ZoomScaffold>
         child: new Scaffold(
           body: Column(
             children: <Widget>[
-              MyCustomAppBarDScreen(
-                divwidth: divwidth,
-                divheight: divheight,
-                appBarSize: divheight * 0.5,
-                ontap: () {
-                  menuController.toggle();
-                },
-              ),
+              widget.contentScreen.isID == false
+                  ? MyCustomAppBar(
+                      divheight: divheight,
+                      divwidth: divwidth,
+                      ontap: () {
+                        menuController.toggle();
+                      },
+                      appBarSize: divheight / 2 * 0.35,
+                    )
+                  : MyCustomAppBarDScreen(
+                      divwidth: divwidth,
+                      divheight: divheight,
+                      appBarSize: divheight * 0.5,
+                      ontap: () {
+                        menuController.toggle();
+                      },
+                    ),
               widget.contentScreen.contentBuilder(context),
             ],
           ),
@@ -197,11 +212,13 @@ class Screen {
   final String title;
   final DecorationImage background;
   final WidgetBuilder contentBuilder;
+  final bool isID;
 
   Screen({
     this.title,
     this.background,
     this.contentBuilder,
+    this.isID,
   });
 }
 

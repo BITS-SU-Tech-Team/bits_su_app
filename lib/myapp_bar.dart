@@ -6,11 +6,13 @@ class MyCustomAppBar extends StatelessWidget {
     @required this.divheight,
     @required this.divwidth,
     @required this.appBarSize,
+    this.ontap,
   }) : super(key: key);
 
   final double divheight;
   final double divwidth;
   final double appBarSize;
+  final Function ontap;
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +45,12 @@ class MyCustomAppBar extends StatelessWidget {
             icon: Padding(
               padding: EdgeInsets.only(top: divheight * 0.025),
               child: Icon(
-                Icons.arrow_back,
+                Icons.menu,
                 color: Colors.white,
                 size: 30.0,
               ),
             ),
-            onPressed: null,
+            onPressed: ontap,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
