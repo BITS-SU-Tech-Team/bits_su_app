@@ -155,6 +155,7 @@ final Screen idCardScreen = new Screen(
           }
         },
       );
+
     });
 
 Future<List<Food>> _getFoodDetails() async {

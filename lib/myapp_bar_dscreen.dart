@@ -88,7 +88,7 @@ class MyCustomAppBarDScreen extends StatelessWidget {
               ),
               Center(
                 child: Image.asset(
-                  'images/id_card_3.png',
+                  'images/id_card_4.png',
                   height: 130.0,
                   width: 360.0,
                 ),
@@ -118,6 +118,11 @@ class MyCustomAppBarDScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              PageView(
+                children: <Widget>[
+
+                ],
+              )
             ],
           ),
         ),

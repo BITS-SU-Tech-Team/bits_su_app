@@ -25,6 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_vector_icons: ^0.1.0
   http: ^0.12.0+2
+  flutter_circular_chart: ^0.1.0
+  flutter_circular_slider: ^2.5.0
+  fluttertoast: ^2.0.7
 
 dev_dependencies:
   flutter_test:
