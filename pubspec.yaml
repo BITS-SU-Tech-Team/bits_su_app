@@ -55,8 +55,8 @@ flutter:
   fonts:
     - family: Montserrat
       fonts:
-        - asset: assets/Montserrat-Light.ttf
-        - asset: assets/Montserrat-LightItalic.ttf
+        - asset: fonts/Montserrat-Light.ttf
+        - asset: fonts/Montserrat-LightItalic.ttf
           style: italic
     - family: CeraPro
       fonts:
