@@ -51,7 +51,13 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - images/
+
   fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/Montserrat-Light.ttf
+        - asset: assets/Montserrat-LightItalic.ttf
+          style: italic
     - family: CeraPro
       fonts:
         - asset: fonts/CeraPro-Light.ttf
@@ -64,6 +70,7 @@ flutter:
     - family: bebas-neue
       fonts:
         - asset: assets/BebasNeue-Regular.ttf
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
