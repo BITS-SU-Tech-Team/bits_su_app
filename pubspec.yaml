@@ -28,7 +28,8 @@ dependencies:
   flutter_circular_chart: ^0.1.0
   flutter_circular_slider: ^2.5.0
   fluttertoast: ^2.0.7
-
+  curved_navigation_bar: ^0.2.20
+  rxdart: ^0.21.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -51,7 +52,13 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - images/
+
   fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Light.otf
+        - asset: fonts/Montserrat-LightItalic.otf
+          style: italic
     - family: CeraPro
       fonts:
         - asset: fonts/CeraPro-Light.ttf
@@ -64,6 +71,7 @@ flutter:
     - family: bebas-neue
       fonts:
         - asset: assets/BebasNeue-Regular.ttf
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,11 +1,10 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:bits_su_app/myapp_bar_dscreen.dart';
 import 'package:bits_su_app/menu_screen.dart';
 import 'package:bits_su_app/other_screen.dart';
 import 'package:bits_su_app/idcard_screen.dart';
 import 'package:bits_su_app/zoom_scaffold.dart';
 import 'package:bits_su_app/circular_image.dart';
-import 'info_screen.dart';
 import 'package:bits_su_app/profile_screen.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
@@ -74,7 +73,7 @@ class _DisableIDScreenState extends State<DisableIDScreen> {
           } else if (itemId == 'idcardpg') {
             setState(() => activeScreen = idCardScreen);
           } else {
-            setState(() => activeScreen = InfoScreen() as Screen);
+            setState(() => activeScreen = otherScreen);
           }
         },
       ),

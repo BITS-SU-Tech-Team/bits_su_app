@@ -11,8 +11,8 @@ class MenuTabBar extends StatefulWidget {
   final Color background;
   final List<IconButton> iconButtons;
 
-  MenuTabBar({Key key, this.child, this.background = Colors.blue, this.iconButtons, this.colorMenuIconActivated = Colors.blue, this.colorMenuIconDefault = Colors.white,
-    this.backgroundMenuIconActivated = Colors.white, this.backgroundMenuIconDefault = Colors.blue})
+  MenuTabBar({Key key, this.child, this.background = Colors.blue, this.iconButtons, this.colorMenuIconActivated = Colors.red, this.colorMenuIconDefault = Colors.white,
+    this.backgroundMenuIconActivated = Colors.white, this.backgroundMenuIconDefault = Colors.red})
       : assert(iconButtons != null && iconButtons.length > 1 && iconButtons.length%2 == 0 && child != null), super(key: key);
 
   _MenuTabBar createState() => _MenuTabBar();
@@ -176,7 +176,7 @@ class _MenuTabBar extends State<MenuTabBar> with TickerProviderStateMixin {
                             }
                           }, child:
                             new Transform.rotate(angle: _animationRotate.value, child:
-                              new Icon(Icons.add, color: snapshot.data == -1 ? widget.colorMenuIconDefault : widget.colorMenuIconActivated)),
+                              new Icon(Icons.credit_card, color: snapshot.data == -1 ? widget.colorMenuIconDefault : widget.colorMenuIconActivated)),
                             backgroundColor: snapshot.data == -1 ? widget.backgroundMenuIconDefault : widget.backgroundMenuIconActivated);
                         })
                       );
