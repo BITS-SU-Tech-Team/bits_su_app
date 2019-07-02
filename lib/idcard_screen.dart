@@ -44,46 +44,6 @@ final Screen idCardScreen = new Screen(
             return Container(child: Center(child: Text("Loading...")));
           } else {
             return Expanded(
-//                child: ListView.separated(
-//                  itemCount: snapshot.data.length,
-//                  separatorBuilder: (context, index) {
-//                    return Divider(
-//                      height: 1,
-//                    );
-//                  },
-//                  itemBuilder: (BuildContext context, int index) {
-//                    return ListTile(
-//                      leading: SizedBox(
-//                        height: double.infinity,
-//                        width: 100,
-//                        child: Row(
-//                          mainAxisSize: MainAxisSize.min,
-//                          children: <Widget>[
-//                            Icon(Icons.phone, color: Colors.blue),
-//                            VerticalDivider(),
-//                          ],
-//                        ),
-//                      ),
-//                      title: Text(snapshot.data[index].foodTitle),
-//                      subtitle: Text(snapshot.data[index].foodQuantity),
-//                      onTap: () {},
-//                      trailing: Icon(Icons.keyboard_arrow_right,
-//                          color: Colors.yellow, size: 30.0),
-//                    );
-////                    return MyListTile(
-////                      leading: Row(
-////                        mainAxisSize: MainAxisSize.min,
-////                        children: <Widget>[
-////                          Icon(Icons.phone, color: Colors.blue),
-////                          VerticalDivider(),
-////                        ],
-////                      ),
-////                      title: Text(snapshot.data[index].foodTitle),
-////                      trailing: Icon(Icons.keyboard_arrow_right,
-////                          color: Colors.yellow, size: 30.0),
-////                    );
-//                  },
-//                ),
               child: ListView.builder(
                 itemBuilder: (ctx, i) {
                   var borderSide =
@@ -155,7 +115,6 @@ final Screen idCardScreen = new Screen(
           }
         },
       );
-
     });
 
 Future<List<Food>> _getFoodDetails() async {
