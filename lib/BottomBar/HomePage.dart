@@ -8,6 +8,7 @@ import 'BottomBar.dart';
 import 'package:bits_su_app/screens/Login.dart';
 import 'package:bits_su_app/screens/updated_profile_page.dart';
 import 'package:bits_su_app/screens/Signings.dart';
+import 'package:bits_su_app/updated_ers_page.dart';
 class Home extends StatefulWidget {
 
   @override
@@ -17,7 +18,7 @@ final _pageoptions = [
   Expenditure(),
   DisableCard(),
   MyHomePage(),
-  LoginPage(),
+//IDCardPage(),
  Signings() ,
 ];
 int _page=0;
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Color(0xffFCAD01),
         body: new SafeArea(child: new Stack(children: <Widget>[
          Container(
-height: MediaQuery.of(context).size.height*0.888,
+
          child:  _pageoptions[_page],
          ),
           new BottomBar(_page,callback)

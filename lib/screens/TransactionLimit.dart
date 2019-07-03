@@ -22,6 +22,7 @@ class _ExpenditureState extends State<Expenditure> {
       home: Scaffold(
 
         body: Container(
+
           decoration: BoxDecoration(
               gradient: LinearGradient(begin: Alignment.topRight,end: Alignment.bottomLeft,colors: [ Colors.indigo[800],
                 Colors.indigo[700],
@@ -53,32 +54,32 @@ class _ExpenditureState extends State<Expenditure> {
               ),
               Center(
                 child: Container(
-                  margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: SingleCircularSlider(
+
                     100,
                     Limit,
                     baseColor: buttonbg,
-                    child: Padding(
-                      padding: EdgeInsets.all(42),
-                      child: Center(
-                          child: Text(
-                            '$limit',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 24,
-                                fontFamily: 'CeraPro',
-                                fontWeight: FontWeight.bold),
-                          )),
-                    ),
+                    child: Center(
+                        child: Text(
+                          '$limit',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontFamily: 'CeraPro',
+                              fontWeight: FontWeight.bold),
+                        )),
                     onSelectionChange: _ChangeLimit,
                     handlerColor: Colors.red,
                     selectionColor: Colors.red,
+                  height: MediaQuery.of(context).size.height*0.4,
+                    width: MediaQuery.of(context).size.width*0.4,
                   ),
                 ),
               ),
 
               Container(
-                  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  margin: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.height*0.003, 0, 0),
                   width: 250,
                   height: 50,
                   child: ClipRRect(

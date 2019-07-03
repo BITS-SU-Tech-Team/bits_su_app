@@ -30,6 +30,7 @@ dependencies:
   fluttertoast: ^2.0.7
   curved_navigation_bar: ^0.2.20
   rxdart: ^0.21.0
+  dots_indicator: ^0.0.5
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bits_su_app/IDCardDesign.dart';
 class Signings extends StatefulWidget {
   @override
   _SigningsState createState() => _SigningsState();
@@ -27,8 +28,10 @@ class _SigningsState extends State<Signings> {
                     borderRadius: new BorderRadius.only(
                         bottomLeft: const Radius.circular(40),
                         bottomRight: const Radius.circular(40))),
+
               ),
             ),
+
             Container(
               margin: EdgeInsets.fromLTRB(0, 180, 0, 0),
               child: Row(
@@ -101,7 +104,7 @@ class _SigningsState extends State<Signings> {
 
           Expanded(
             child: ListView.builder(
-              itemCount: 1,
+              itemCount: 10,
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {

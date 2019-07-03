@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //        ),
        
         body: Container(
-          margin: EdgeInsets.fromLTRB(0, 0, 0, 50),
+          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: new Stack(
             children: <Widget>[
               ClipPath(
@@ -166,8 +166,11 @@ class _BottomSheetQRState extends State<BottomSheetQR>
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 32),
               decoration: const BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
+                gradient: LinearGradient(colors: [
+                  Color(0xff4E97CF),
+                  Color(0xff97C8EE)
+                ],begin: Alignment.topCenter,end: Alignment.bottomCenter)
+                ,borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
               ),
               child: Stack(
                 children: <Widget>[
@@ -255,7 +258,7 @@ class QRImage extends StatelessWidget {
         opacity: isVisible ? 1 : 0,
         duration: Duration(milliseconds: 200),
         child: Container(
-          height: 250.0,
+          height: 300.0,
           decoration: BoxDecoration(
             color: Colors.white,
             image: DecorationImage(

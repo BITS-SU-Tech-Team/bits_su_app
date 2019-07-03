@@ -12,6 +12,18 @@ class IDCard extends StatefulWidget {
 class _IDCardState extends State<IDCard> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Stack(
+      children: <Widget>[
+        Container(
+          child: PageView(
+            controller: PageController(initialPage: 0),
+children: <Widget>[
+
+
+],
+          ),
+        ),
+      ],
+    );
   }
 }
