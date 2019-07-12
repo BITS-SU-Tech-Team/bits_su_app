@@ -8,11 +8,12 @@ class IDcard extends StatefulWidget {
 var username = 'Ayush Singh';
 
 class _IDcardState extends State<IDcard> {
+  var bottom =30.0;
   @override
   Widget build(BuildContext context) {
     return  Container(
-      margin: EdgeInsets.fromLTRB(10, 30, 10, 5),
-      height: 220,
+      margin: EdgeInsets.fromLTRB(10, bottom, 10, 10),
+      height: 205,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -89,7 +90,7 @@ class _IDcardState extends State<IDcard> {
                               ))
                         ]
                     )),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 5,),
                     Text.rich(TextSpan(
                         text: 'Hostel:  ',
                         style: TextStyle(
@@ -106,7 +107,7 @@ class _IDcardState extends State<IDcard> {
                               ))
                         ])),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
 
                     SizedBox(height: 5,),
@@ -122,7 +123,7 @@ class _IDcardState extends State<IDcard> {
             children: <Widget>[
 
               Container(
-                  margin: EdgeInsets.fromLTRB(0, 20, 10, 10),
+                  margin: EdgeInsets.fromLTRB(0, 10, 10, 10),
                   child: Text(
                     'Valid till:July 2020',
                     style: TextStyle(fontWeight: FontWeight.w900),

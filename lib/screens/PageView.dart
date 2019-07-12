@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'info_screen.dart';
 import 'package:bits_su_app/myapp_bar.dart';
-import 'package:bits_su_app/detailpage.dart';
+
 import 'package:bits_su_app/profile_screen.dart';
 import 'BlockCard.dart';
 

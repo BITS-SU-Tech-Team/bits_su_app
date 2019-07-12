@@ -31,6 +31,11 @@ dependencies:
   curved_navigation_bar: ^0.2.20
   rxdart: ^0.21.0
   dots_indicator: ^0.0.5
+  md2_tab_indicator: ^1.0.2
+  fluttery_seekbar: ^0.0.1
+  bezier_chart: ^1.0.10
+  charts_flutter: ^0.6.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -73,7 +78,17 @@ flutter:
       fonts:
         - asset: assets/BebasNeue-Regular.ttf
 
+    - family: PaulGrotesk
+      fonts:
+        - asset: assets/PaulGrotesk-Regular-Trail.otf
+    - family: Bauer Grotesk OT W03 Book
+      fonts:
+        - asset: fonts/Bauer Grotesk OT W03 Book.ttf
 
+    - family: Averta
+      fonts:
+        - asset: fonts/Averta-Regular.otf
+        - asset: fonts/Averta-ExtraBold.otf
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

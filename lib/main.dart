@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:bits_su_app/screens/info_screen.dart';
-import 'package:bits_su_app/screens/disableId_screen.dart';
-import 'package:bits_su_app/screens/updated_profile_page.dart';
-import 'updated_ers_page.dart';
-import 'BottomBar/HomePage.dart';
+import 'signings.dart';
 import 'BottomBar/curved_bottom_bar.dart';
-
+import 'screens/charts.dart';
+import 'listview.dart';
+import 'screens/Login.dart';
+import 'screens/Signings.dart';
+import 'screens/event_details.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: CurvedBottomBar(),
-    );
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: CurvedBottomBar()
+        ));
   }
 }

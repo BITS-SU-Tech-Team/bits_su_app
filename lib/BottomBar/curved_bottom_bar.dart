@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:bits_su_app/screens/TransactionLimit.dart';
 import 'package:bits_su_app/screens/Signings.dart';
+import 'package:bits_su_app/signings.dart';
+import 'package:bits_su_app/idcard.dart';
+import 'package:bits_su_app/screens/Limits.dart';
 import 'package:bits_su_app/screens/BlockCard.dart';
 import 'package:bits_su_app/updated_ers_page.dart';
+import 'package:bits_su_app/screens/event_details.dart';
+import 'package:bits_su_app/screens/Signings.dart';
 import 'package:bits_su_app/screens/updated_profile_page.dart';
+
 class CurvedBottomBar extends StatefulWidget {
   @override
   _CurvedBottomBarState createState() => _CurvedBottomBarState();
@@ -13,11 +19,11 @@ class CurvedBottomBar extends StatefulWidget {
 class _CurvedBottomBarState extends State<CurvedBottomBar> {
   int _page = 0;
   final _pageoptions = [
-    Expenditure(),
-    DisableCard(),
-    MyHomePage(),
+ DisableCard(),
+    SigningsDesign(),
+    SetLimits(),
     IDCardPage(),
-    Signings() ,
+    MyHomePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -30,7 +36,7 @@ class _CurvedBottomBarState extends State<CurvedBottomBar> {
           ),
           Icon(Icons.list, size: 30),
           Icon(Icons.compare_arrows, size: 30),
-          Icon(Icons.call_split, size: 30),
+          Icon(Icons.credit_card, size: 30),
           Icon(Icons.perm_identity, size: 30),
         ],
         color: Colors.white,

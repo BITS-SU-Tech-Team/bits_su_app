@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: new Stack(
             children: <Widget>[
               ClipPath(
-                child: Container(color: Colors.black.withOpacity(0.8)),
+                child: Container(color: Colors.blueAccent.withOpacity(1)),
                 clipper: getClipper(),
               ),
               Positioned(
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       '2017B4A70633P',
                       style: TextStyle(
                           fontSize: 17.0,
-                          fontStyle: FontStyle.italic,
+                         fontWeight: FontWeight.w900,
                           fontFamily: 'Montserrat'),
                     ),
                     SizedBox(
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       'RM 1173',
                       style: TextStyle(
                         fontSize: 17.0,
-                        fontStyle: FontStyle.italic,
+                         fontWeight: FontWeight.w900,
                         fontFamily: 'Montserrat',
                       ),
                     ),
@@ -167,13 +167,16 @@ class _BottomSheetQRState extends State<BottomSheetQR>
               padding: const EdgeInsets.symmetric(horizontal: 32),
               decoration: const BoxDecoration(
                 gradient: LinearGradient(colors: [
-                  Color(0xff4E97CF),
-                  Color(0xff97C8EE)
-                ],begin: Alignment.topCenter,end: Alignment.bottomCenter)
+                  Color(0xff4B55C1),
+                  Color(0xff3F51B5),
+                  Color(0xff673AB7),
+                ],begin: Alignment.topLeft,end: Alignment.bottomRight)
                 ,borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
               ),
               child: Stack(
+
                 children: <Widget>[
+
                   QRbutton(),
                   SheetHeader(
                     //<-- Add a header with params
@@ -258,13 +261,30 @@ class QRImage extends StatelessWidget {
         opacity: isVisible ? 1 : 0,
         duration: Duration(milliseconds: 200),
         child: Container(
-          height: 300.0,
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+              height: 10,
+          ),
+              CircleAvatar(radius: 35,backgroundImage: NetworkImage( 'https://avatars1.githubusercontent.com/u/30185369?s=460&v=4'),),
+              SizedBox(height: 10,),
+              Text('Rohit K Bharadwaj',style: TextStyle(fontSize: 16,fontFamily: 'Montserrat',fontWeight: FontWeight.bold),),
+              SizedBox(height: 3,),
+              SizedBox(height: 1,child: Container(color: Colors.grey,),),Center(child: Image.network(  'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'),),
+            ],
+          ),
+          width: MediaQuery.of(context).size.width*0.6,
+          height: MediaQuery.of(context).size.height*0.6,
           decoration: BoxDecoration(
             color: Colors.white,
-            image: DecorationImage(
-                image: NetworkImage(
-                    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'),
-                fit: BoxFit.cover),
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+
+          //  image: DecorationImage(
+
+              //  image: NetworkImage(
+            //        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png'),
+              //  fit: BoxFit.cover),
+
           ),
         ),
       ),
